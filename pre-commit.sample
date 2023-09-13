@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+./gen.sh
+
+git add index.html
+
+# copy me to .git/hooks/pre-commit
+# cp pre-commit.sample .git/hooks/pre-commit

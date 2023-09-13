@@ -1,0 +1,332 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.author {
+  font-family: Kode Mono, monospace;
+  letter-spacing: -2px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+hr {
+  width: 50%;
+  border-width: 0;
+  background-color: #450070;
+  color: #450070;
+  height: 2px;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+
+div.slide.titlepage h1.title {
+  padding: 0;
+}
+
+div.slide.titlepage .subtitle {
+  font-family: Kode Mono, monospace;
+  margin-top: 1rem;
+}
+
+div.slide.titlepage p.author {
+  margin-top: 1rem;
+}
+
+div.slide.titlepage p.date {
+  margin-top: 3rem;
+}
+
+div.slide.titlepage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+pre {
+  background: rgba(0, 0, 0, 0.5);
+  border-width: 2px;
+  border-color: #580335;
+  font-size: 90%;
+}
+
+pre code {
+  background: none;
+}
+
+#video-cover {
+  display: none;
+  position: fixed;
+  top: -1px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+ul li {
+  list-style: circle;
+}
+
+code {
+  white-space: pre-line;
+}
+
+span.smallcaps {
+  font-variant: small-caps;
+}
+
+div.columns {
+  display: flex;
+  gap: min(4vw, 1.5em);
+}
+
+div.column {
+  flex: auto;
+  overflow-x: auto;
+}
+
+div.hanging-indent {
+  margin-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+/* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+ul.task-list[class] {
+  list-style: none;
+}
+
+ul.task-list li input[type="checkbox"] {
+  font-size: inherit;
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+
+.display.math {
+  display: block;
+  text-align: center;
+  margin: 0.5rem auto;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+div.slide.titlepage .icons img {
+  width: 3.5em !important;
+  height: 3.5em !important;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* Slides */
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.slide:not(.titlepage) {
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.slide .icons img {
+  margin: 0 2.5em;
+}
+
+.slide .icons img:first-of-type,
+.slide .icons img:last-of-type {
+  margin: 0;
+}
+
+.slide .container {
+  display: flex;
+  margin-top: 4em;
+  aspect-ratio: 16/9;
+  height: 90vh;
+  max-width: 80vw;
+  flex-direction: column;
+}
+
+.slide.titlepage .container {
+  aspect-ratio: unset;
+  height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+
+.slide .container header {
+  display: block;
+  padding-bottom: 1em;
+}
+
+
+.slide .container header h1 {
+  max-width: 100%;
+  letter-spacing: -2px;
+  font-weight: 700;
+}
+
+.slide .container header code {
+  font-size: inherit;
+}
+
+.slide .container .content {
+  overflow: auto;
+  flex-direction: column;
+}
+
+.slide .container h1,
+.slide .container h2,
+.slide .container p {
+  margin: 0;
+  font-weight: 400;
+}
+
+.slide .container p {
+  margin-bottom: 20px;
+}
+
+.slide .container .content {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.slide .container .content img {
+  max-width: 100%;
+}
+
+.slide .container .content a:link,
+.slide .container .content a:hover,
+.slide .container .content a:visited {
+  text-decoration: underline !important;
+  color: #2997FF !important;
+}
+
+.slide .container code {
+  display: inline-block;
+  color: #fcb0dc;
+  background: rgba(0, 0, 0, 0.2);
+  font-family: Kode Mono, monospace;
+  font-size: 100%;
+  padding: 1px 8px;
+  background-color: rgb(134,23,150, 0.2);
+  border-radius: 8px;
+}
+
+.slide .container .content pre > code {
+  color: unset;
+  background: unset;
+  font-family: Kode Mono, monospace;
+  font-weight: 400;
+  font-size: 90%;
+  white-space: pre;
+}
+
+.slide .container .content h1,
+.slide .container .content h2 {
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: white;
+}
+
+.slide .container .content h1 {
+  font-size: 150%;
+}
+
+.slide .container .content h2 {
+  font-size: 120%;
+  font-weight: 600;
+  margin-top: 0px;
+}
+
+.slide .container .content h2:not(:first-child) {
+  margin-top: 70px !important
+}
+
+.slide .container .content p,
+.slide .container .content ul li {
+  font-size: 100%;
+  line-height: 140%;
+}
+
+.slide .container .content pre {
+  border: 4px solid rgba(0, 188, 250, 0.8);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  padding: 16px 24px;
+  color: white;
+  margin-left: unset;
+  margin-right: unset;
+  width: max-content;
+  max-width: 80%;
+}
+
+.slide .container .content {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.slide .container .content::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+code span.al { color: #FF3338; font-weight: bold; } /* Alert red 60 */
+code span.an { color: #CBFFB3; font-weight: bold; font-style: italic; } /* Annotation green 30 */
+code span.at { color: #CCE6FF; } /* Attribute blue 30 */
+code span.bn { color: #B1FA8F; } /* BaseN green 40 */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #FFC670; font-weight: bold; } /* ControlFlow yellow 40 */
+code span.ch { color: #C2E1FF; } /* Char blue 40 */
+code span.cn { color: #FFE7C2; } /* Constant yellow 20 */
+code span.co { color: #CACBCE; font-style: italic; } /* Comment gray 30 */
+code span.cv { color: #CACBCE; font-weight: bold; font-style: italic; } /* CommentVar gray 30 */
+code span.do { color: #FFA8B0; font-style: italic; } /* Documentation red 40 */
+code span.dt { color: #FFD799; } /* DataType yellow 30 */
+code span.dv { color: #CCE6FF; } /* DecVal  blue 30*/
+code span.er { color: #FF3338; font-weight: bold; } /* Error red 60 */
+code span.ex { } /* Extension */
+code span.fl { color: #CCE6FF; } /* Float */
+code span.fu { color: #CBFFB3; } /* Function green 30 */
+code span.im { } /* Import */
+code span.in { color: #C2E1FF; font-weight: bold; font-style: italic; } /* Information blue 40 */
+code span.kw { color: #DBA3FF; font-weight: bold; } /* Keyword purple 30 */
+code span.op { color: #FFD799; } /* Operator yellow 30 */
+code span.ot { color: #9EF273; } /* Other green 50 */
+code span.pp { color: #FFC670; } /* Preprocessor yellow 40 */
+code span.sc { color: #75BCFF; } /* SpecialChar blue 50 */
+code span.ss { color: #F962BB; } /* SpecialString pink 50 */
+code span.st { color: #FCB0DC; } /* String yellow 30 */
+code span.va { color: #C2E1FF; } /* Variable blue 40 */
+code span.vs { color: #FFC670; } /* VerbatimString yellow 40 */
+code span.wa { color: #FFB23D; font-weight: bold; font-style: italic; } /* Warning yellow 50 */
+
+/* line numbers */
+pre.numberSource > code.sourceCode > span > a:first-child::before {
+  text-decoration: none;
+  left: -1rem;
+  color: #768489; /* gray 40 - alt: rgba(0, 188, 250, 1); blue from border */
+  content: counter(source-line, decimal-leading-zero);
+}
+
+.slide .container .content pre.numberSource {
+  padding-left: 3rem;
+}

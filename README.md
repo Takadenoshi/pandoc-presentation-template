@@ -146,10 +146,12 @@ Deploying this to Github pages is straightforward.
 
 1) (Fork repo, rename, enter your content, etc)
 1) Go to GitHub -> Settings -> Pages
-1) Under "Build and Deployment -> Source", select "GitHub Actions"
-1) Configure the "Static HTML" workflow
-1) Accept the defaults
-    1) If you have customized the location of `index.html`: Locate `path` under `jobs.deploy.steps.Upload artifact` (should have a comment "Upload entire repository".) Replace `.` with the path to your document root.
+1) Under "Build and Deployment -> Branch", select `main` and click `Save`.
 
+If you want to move `index.html` to a subfolder:
+
+1) Edit `/.github/workflows/static.yml`
+1) Locate the `jobs.deploy.steps.Upload artifact` step (should have a comment "Upload entire repository".)
+1) Replace `path` with the path to your document root.
 
 _Note: This is only available for public repositories._

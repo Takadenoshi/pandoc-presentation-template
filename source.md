@@ -3,14 +3,14 @@ title-prefix: Example
 title:  Kadena-themed Pandoc Presentation Template
 author: tasos@kadena.io isa@kadena.io
 date: September 13, 2023
-background: assets/images/bg.png # image background; used if video is not present or slide_bg_is_video is not true
-icons: # icon sources for title slide
+background: assets/images/bg.png                # image background; used if video is not present or slide_bg_is_video is not true
+icons:                                          # icon sources for title slide
   - assets/icons/k-internal-icon.jpg
-video: # video for background. multiple formats are supported
+video:                                          # video for background. multiple formats are supported
   - src: assets/videos/kd-back.mp4
     type: video/mp4
-video_playback_rate: 0.5 # slow down the video
-slide_bg_is_video: true # use a darkened version of the video as slide background
+video_playback_rate: 0.5                        # slow down the video
+slide_bg_is_video: true                         # true to use a darkened version of the video as slide background
 ---
 
 # Kadena-themed Pandoc Presentation Template
@@ -49,21 +49,32 @@ Aside from those you can also press `v` to hide the video background.
 
 # Configuring
 
-## Markdown metadata
+## Markdown metadata (1)
 
 The header of the source markdown file includes the following variables that can be set. Refer to `source.md` contents for an example.
 
-|name|description|
-|----|-----------|
-|title|Presentation title. Ends up in title slide, page title|
-|title-prefix|Presentation prefix for html page title|
-|author|Ends up in title slide, page meta author|
-|date|Ends up in title slide, page meta date|
-|icons|List of image sources to show as icons over the title on the title slide. can be omitted|
-|video|List of `{.src, .type}` for video sources for the background of the title slide (or the entire presentation)|
-|video_playback_rate|custom playback rate for the video|
-|slide_bg_is_video|`true` to use the video as presentation background, `false` to use image instead|
-|background|image background for presentation if `video` is missing or `slide_bg_is_video` is `false`|
+|Name|Description|
+|:----|:-----------|
+|`title`|Presentation title. Ends up in title slide, page title|
+|`title-prefix`|Presentation prefix for html page title|
+|`author`|Ends up in title slide, page meta author|
+|`date`|Ends up in title slide, page meta date|
+
+# Configuring
+
+## Markdown metadata (2)
+
+The following custom metadata can be used to customize the presentation theme.
+
+They can be omitted, which will default to an image background.
+
+|Name|Description|
+|:----|:-----------|
+|`icons`|List of image sources to show as icons over the title on the title slide. can be omitted|
+|`video`|List of `{.src, .type}` for video sources for the background of the title slide (or the entire presentation)|
+|`video_playback_rate`|custom playback rate for the video|
+|`slide_bg_is_video`|`true` to use the video as presentation background, `false` to use image instead|
+|`background`|image background for presentation if `video` is missing or `slide_bg_is_video` is `false`|
 
 # Configuring
 
@@ -99,13 +110,14 @@ Code blocks can have syntax highlighting, e.g.:
     console.log("very nice");
     ` ` `
 
-_Note: the backticks above had to be spaced for font rendering purposes. Do not include spaces between backticks in your code._
-
 Produces:
 
 ```javascript
 console.log("very nice");
 ```
+
+_Note: the backticks above had to be spaced for font rendering purposes. Do not include spaces between backticks in your code._
+
 # Writing pandoc slides
 
 ## Code blocks, with line numbers
@@ -117,14 +129,14 @@ If you need line numbers in code blocks, use this invocation:
     console.log("nice");
     ` ` `
 
-_Note: the backticks above had to be spaced for font rendering purposes. Do not include spaces between backticks in your code._
-
 Produces:
 
 ```{.javascript .numberLines}
 console.log("very");
 console.log("nice");
 ```
+
+_Note: the backticks above had to be spaced for font rendering purposes. Do not include spaces between backticks in your code._
 
 # Writing pandoc slides
 
@@ -207,10 +219,12 @@ Deploying this to Github pages is straightforward.
 
 1) (Fork repo, rename, enter your content, etc)
 1) Go to GitHub -> Settings -> Pages
-1) Under "Build and Deployment -> Source", select "GitHub Actions"
-1) Configure the "Static HTML" workflow
-1) Accept the defaults
-    1) If you have customized the location of `index.html`: Locate `path` under `jobs.deploy.steps.Upload artifact` (should have a comment "Upload entire repository".) Replace `.` with the path to your document root.
+1) Under "Build and Deployment -> Branch", select `main` and click `Save`.
 
+If you want to move `index.html` to a subfolder:
+
+1) Edit `/.github/workflows/static.yml`
+1) Locate the `jobs.deploy.steps.Upload artifact` step (should have a comment "Upload entire repository".)
+1) Replace `path` with the path to your document root.
 
 _Note: This is only available for public repositories._

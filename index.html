@@ -95,8 +95,8 @@
 </head>
 <body>
   
-    <img src="assets/images/bg.png" class="background" />
-  
+  <img src="assets/images/bg.png" class="background" />
+
       <video id="video-cover" loop muted oncanplay="showvideo()">
           <source src="assets/videos/kd-back.mp4" type="video/mp4" />
       </video>
@@ -152,60 +152,76 @@
 </div>
 <div id="configuring" class="slide section level1">
 <h1>Configuring</h1>
-<h2 id="markdown-metadata">Markdown metadata</h2>
+<h2 id="markdown-metadata-1">Markdown metadata (1)</h2>
 <p>The header of the source markdown file includes the following variables that can be set. Refer to <code>source.md</code> contents for an example.</p>
 <table>
-<colgroup>
-<col width="26%" />
-<col width="73%" />
-</colgroup>
 <thead>
 <tr class="header">
-<th>name</th>
-<th>description</th>
+<th align="left">Name</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>title</td>
-<td>Presentation title. Ends up in title slide, page title</td>
+<td align="left"><code>title</code></td>
+<td align="left">Presentation title. Ends up in title slide, page title</td>
 </tr>
 <tr class="even">
-<td>title-prefix</td>
-<td>Presentation prefix for html page title</td>
+<td align="left"><code>title-prefix</code></td>
+<td align="left">Presentation prefix for html page title</td>
 </tr>
 <tr class="odd">
-<td>author</td>
-<td>Ends up in title slide, page meta author</td>
+<td align="left"><code>author</code></td>
+<td align="left">Ends up in title slide, page meta author</td>
 </tr>
 <tr class="even">
-<td>date</td>
-<td>Ends up in title slide, page meta date</td>
-</tr>
-<tr class="odd">
-<td>icons</td>
-<td>List of image sources to show as icons over the title on the title slide. can be omitted</td>
-</tr>
-<tr class="even">
-<td>video</td>
-<td>List of <code>{.src, .type}</code> for video sources for the background of the title slide (or the entire presentation)</td>
-</tr>
-<tr class="odd">
-<td>video_playback_rate</td>
-<td>custom playback rate for the video</td>
-</tr>
-<tr class="even">
-<td>slide_bg_is_video</td>
-<td><code>true</code> to use the video as presentation background, <code>false</code> to use image instead</td>
-</tr>
-<tr class="odd">
-<td>background</td>
-<td>image background for presentation if <code>video</code> is missing or <code>slide_bg_is_video</code> is <code>false</code></td>
+<td align="left"><code>date</code></td>
+<td align="left">Ends up in title slide, page meta date</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div id="configuring-1" class="slide section level1">
+<h1>Configuring</h1>
+<h2 id="markdown-metadata-2">Markdown metadata (2)</h2>
+<p>The following custom metadata can be used to customize the presentation theme.</p>
+<p>They can be omitted, which will default to an image background.</p>
+<table>
+<colgroup>
+<col width="29%" />
+<col width="70%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>icons</code></td>
+<td align="left">List of image sources to show as icons over the title on the title slide. can be omitted</td>
+</tr>
+<tr class="even">
+<td align="left"><code>video</code></td>
+<td align="left">List of <code>{.src, .type}</code> for video sources for the background of the title slide (or the entire presentation)</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>video_playback_rate</code></td>
+<td align="left">custom playback rate for the video</td>
+</tr>
+<tr class="even">
+<td align="left"><code>slide_bg_is_video</code></td>
+<td align="left"><code>true</code> to use the video as presentation background, <code>false</code> to use image instead</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>background</code></td>
+<td align="left">image background for presentation if <code>video</code> is missing or <code>slide_bg_is_video</code> is <code>false</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="configuring-2" class="slide section level1">
 <h1>Configuring</h1>
 <p>In case you need to tweak the generated html or stylesheets:</p>
 <h2 id="slidy-template">Slidy template</h2>
@@ -228,9 +244,9 @@
 <pre><code>` ` ` javascript
 console.log(&quot;very nice&quot;);
 ` ` `</code></pre>
-<p><em>Note: the backticks above had to be spaced for font rendering purposes. Do not include spaces between backticks in your code.</em></p>
 <p>Produces:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;very nice&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<p><em>Note: the backticks above had to be spaced for font rendering purposes. Do not include spaces between backticks in your code.</em></p>
 </div>
 <div id="writing-pandoc-slides-2" class="slide section level1">
 <h1>Writing pandoc slides</h1>
@@ -240,10 +256,10 @@ console.log(&quot;very nice&quot;);
 console.log(&quot;very&quot;);
 console.log(&quot;nice&quot;);
 ` ` `</code></pre>
-<p><em>Note: the backticks above had to be spaced for font rendering purposes. Do not include spaces between backticks in your code.</em></p>
 <p>Produces:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode numberSource javascript numberLines"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;very&quot;</span>)<span class="op">;</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;nice&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<p><em>Note: the backticks above had to be spaced for font rendering purposes. Do not include spaces between backticks in your code.</em></p>
 </div>
 <div id="writing-pandoc-slides-3" class="slide section level1">
 <h1>Writing pandoc slides</h1>
@@ -306,12 +322,13 @@ small content to the right
 <ol style="list-style-type: decimal">
 <li>(Fork repo, rename, enter your content, etc)</li>
 <li>Go to GitHub -&gt; Settings -&gt; Pages</li>
-<li>Under “Build and Deployment -&gt; Source”, select “GitHub Actions”</li>
-<li>Configure the “Static HTML” workflow</li>
-<li>Accept the defaults
+<li>Under “Build and Deployment -&gt; Branch”, select <code>main</code> and click <code>Save</code>.</li>
+</ol>
+<p>If you want to move <code>index.html</code> to a subfolder:</p>
 <ol style="list-style-type: decimal">
-<li>If you have customized the location of <code>index.html</code>: Locate <code>path</code> under <code>jobs.deploy.steps.Upload artifact</code> (should have a comment “Upload entire repository”.) Replace <code>.</code> with the path to your document root.</li>
-</ol></li>
+<li>Edit <code>/.github/workflows/static.yml</code></li>
+<li>Locate the <code>jobs.deploy.steps.Upload artifact</code> step (should have a comment “Upload entire repository”.)</li>
+<li>Replace <code>path</code> with the path to your document root.</li>
 </ol>
 <p><em>Note: This is only available for public repositories.</em></p>
 </div>

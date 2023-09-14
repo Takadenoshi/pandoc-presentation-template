@@ -9,6 +9,8 @@ Create Kadena-themed presentations from markdown using pandoc
 
 Optionally: deploy to github pages.
 
+This README is available in presentation form [here](https://takadenoshi.github.io/pandoc-presentation-template).
+
 ## Requirements
 
 Pandoc & nodemon.

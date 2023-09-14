@@ -221,7 +221,9 @@ Deploying this to Github pages is straightforward.
 1) Go to GitHub -> Settings -> Pages
 1) Under "Build and Deployment -> Branch", select `main` and click `Save`.
 
-If you want to move `index.html` to a subfolder:
+<hr />
+
+If you have moved `index.html` to a subfolder:
 
 1) Edit `/.github/workflows/static.yml`
 1) Locate the `jobs.deploy.steps.Upload artifact` step (should have a comment "Upload entire repository".)

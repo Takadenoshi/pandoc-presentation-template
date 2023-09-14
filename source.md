@@ -221,6 +221,10 @@ Deploying this to Github pages is straightforward.
 1) Go to GitHub -> Settings -> Pages
 1) Under "Build and Deployment -> Branch", select `main` and click `Save`.
 
+Your presentation will be deployed to the URL:
+
+`https://<GitHub Username>.github.io/<Repo Name>`
+
 <hr />
 
 If you have moved `index.html` to a subfolder:

@@ -28,7 +28,7 @@ Running `./gen-standalone.sh` will create a standalone index.html with all resou
 
 ## Configuring
 
-The presentation include some reasonable defaults and styling for kadena-themed presentations.
+This template includes some reasonable defaults and styling for kadena-themed presentations.
 
 ### Markdown metadata
 

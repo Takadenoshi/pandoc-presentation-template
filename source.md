@@ -92,6 +92,8 @@ Code blocks can have syntax highlighting, e.g.:
     console.log("very nice");
     ` ` `
 
+_Note: the backticks above had to be spaced for font rendering purposes. Do not include spaces between backticks in your code._
+
 Produces:
 
 ```javascript
@@ -107,6 +109,8 @@ If you need line numbers in code blocks, use this invocation:
     console.log("very");
     console.log("nice");
     ` ` `
+
+_Note: the backticks above had to be spaced for font rendering purposes. Do not include spaces between backticks in your code._
 
 Produces:
 

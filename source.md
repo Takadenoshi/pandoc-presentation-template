@@ -232,5 +232,3 @@ If you have moved `index.html` to a subfolder:
 1) Edit `/.github/workflows/static.yml`
 1) Locate the `jobs.deploy.steps.Upload artifact` step (should have a comment "Upload entire repository".)
 1) Replace `path` with the path to your document root.
-
-_Note: This is only available for public repositories._

@@ -40,11 +40,11 @@ The header of the source markdown file includes the following variables that can
 |title-prefix|Presentation prefix for html page title|
 |author|Ends up in title slide, page meta author|
 |date|Ends up in title slide, page meta date|
-|icons|List of image sources to show as icons over the title on the title slide. can be omitted|
-|video|List of `{.src, .type}` for video sources for the background of the title slide (or the entire presentation)|
-|video_playback_rate|custom playback rate for the video|
-|slide_bg_is_video|`true` to use the video as presentation background, `false` to use image instead|
-|background|image background for presentation if `video` is missing or `slide_bg_is_video` is `false`|
+|icons|List of image sources to show as icons over the title on the title slide. Can be omitted.|
+|video|List of `{.src, .type}` for video sources for the background of the title slide (or the entire presentation). Can be omitted.|
+|video_playback_rate|Custom playback rate for the video.|
+|slide_bg_is_video|`true` to use the video as presentation background, `false` to use image instead. Can be omitted.|
+|background|Image background for presentation if `video` is missing or `slide_bg_is_video` is `false`. Can be omitted.|
 
 ### Slidy template
 
@@ -159,5 +159,3 @@ If you have moved `index.html` to a subfolder:
 1) Edit `/.github/workflows/static.yml`
 1) Locate the `jobs.deploy.steps.Upload artifact` step (should have a comment "Upload entire repository".)
 1) Replace `path` with the path to your document root.
-
-_Note: This is only available for public repositories._

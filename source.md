@@ -211,7 +211,7 @@ If you need to make sure your `index.html` is up to date with your source, you c
 git add index.html
 ```
 
-A sample is provided under `/pre-commit.sample`
+A sample is provided under `/pre-commit.sample` which you can copy to `.git/hooks/pre-commit`
 
 # Deploying to Github pages
 

@@ -144,6 +144,12 @@
 <p>Running <code>./gen-watch.sh</code> will watch the current directory for changes to <code>.md</code> or <code>.slidy</code> files and run <code>gen.sh</code> when any change is detected.</p>
 <p>Running <code>./gen-standalone.sh</code> will create a standalone index.html with all resources inlined, which can be shared as-is.</p>
 </div>
+<div id="presenting" class="slide section level1">
+<h1>Presenting</h1>
+<p>Pandoc supports some keyboard shortcuts while presenting, like <code>s</code> for smaller font size, <code>b</code> for larger, <code>k</code> to disable click-to-forward, <code>c</code> for a table of contents, etc.</p>
+<p>Press <code>h</code> while on the presentation to show a detailed help screen.</p>
+<p>Aside from those you can also press <code>v</code> to hide the video background.</p>
+</div>
 <div id="configuring" class="slide section level1">
 <h1>Configuring</h1>
 <h2 id="markdown-metadata">Markdown metadata</h2>
@@ -264,14 +270,10 @@ console.log(&quot;nice&quot;);
 <p>To split a slide in two or more columns, you can use this markdown:</p>
 <pre><code>:::::::::::::: {.columns}
 ::: {.column width=&quot;80%&quot;}
-
 ## large content to the left
-
 :::
 ::: {.column width=&quot;20%&quot;}
-
 small content to the right
-
 :::
 ::::::::::::::</code></pre>
 <p>Produces:</p>

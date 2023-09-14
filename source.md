@@ -39,6 +39,13 @@ Running `./gen-watch.sh` will watch the current directory for changes to `.md` o
 
 Running `./gen-standalone.sh` will create a standalone index.html with all resources inlined, which can be shared as-is.
 
+# Presenting
+
+Pandoc supports some keyboard shortcuts while presenting, like `s` for smaller font size, `b` for larger, `k` to disable click-to-forward, `c` for a table of contents, etc.
+
+Press `h` while on the presentation to show a detailed help screen.
+
+Aside from those you can also press `v` to hide the video background.
 
 # Configuring
 
@@ -155,14 +162,10 @@ To split a slide in two or more columns, you can use this markdown:
 
     :::::::::::::: {.columns}
     ::: {.column width="80%"}
-
     ## large content to the left
-
     :::
     ::: {.column width="20%"}
-
     small content to the right
-
     :::
     ::::::::::::::
 
@@ -170,14 +173,10 @@ Produces:
 
 :::::::::::::: {.columns}
 ::: {.column width="70%"}
-
 ## large content to the left
-
 :::
 ::: {.column width="30%"}
-
 small content to the right
-
 :::
 ::::::::::::::
 

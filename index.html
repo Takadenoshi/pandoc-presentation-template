@@ -231,6 +231,33 @@
 <p>CSS stylesheets can be tweaked under <code>assets/styles/</code>.</p>
 <p>If you want to pick different colors or tones, please consult the <a href="https://www.figma.com/file/cNQkFOjrqO3PAYv7TSIhpB/Foundation?type=design&amp;node-id=188-869&amp;mode=design&amp;t=5J7YpU6yxy8El0DC-0">Color System</a>.</p>
 </div>
+<div id="pre-commit-hook" class="slide section level1">
+<h1>Pre-commit hook</h1>
+<p>If you need to make sure your <code>index.html</code> is up to date with your source, you can use a pre-commit hook like this:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#!/usr/bin/env sh</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="ex">./gen.sh</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">git</span> add index.html</span></code></pre></div>
+<p>A sample is provided under <code>/pre-commit.sample</code> which you can copy to <code>.git/hooks/pre-commit</code></p>
+</div>
+<div id="deploying-to-github-pages" class="slide section level1">
+<h1>Deploying to Github pages</h1>
+<p>Deploying this to Github pages is straightforward.</p>
+<ol style="list-style-type: decimal">
+<li>(Fork repo, rename, enter your content, etc)</li>
+<li>Go to GitHub -&gt; Settings -&gt; Pages</li>
+<li>Under “Build and Deployment -&gt; Branch”, select <code>main</code> and click <code>Save</code>.</li>
+</ol>
+<p>Your presentation will be deployed to the URL:</p>
+<p><code>https://&lt;GitHub Username&gt;.github.io/&lt;Repo Name&gt;</code></p>
+<hr />
+<p>If you have moved <code>index.html</code> to a subfolder:</p>
+<ol style="list-style-type: decimal">
+<li>Edit <code>/.github/workflows/static.yml</code></li>
+<li>Locate the <code>jobs.deploy.steps.Upload artifact</code> step (should have a comment “Upload entire repository”.)</li>
+<li>Replace <code>path</code> with the path to your document root.</li>
+</ol>
+</div>
 <div id="writing-pandoc-slides" class="slide section level1">
 <h1>Writing pandoc slides</h1>
 <p>The full pandoc markdown reference can be found <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">here</a>.</p>
@@ -245,7 +272,7 @@
 console.log(&quot;very nice&quot;);
 ` ` `</code></pre>
 <p>Produces:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;very nice&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;very nice&quot;</span>)<span class="op">;</span></span></code></pre></div>
 <p><em>Note: the backticks above had to be spaced for font rendering purposes. Do not include spaces between backticks in your code.</em></p>
 </div>
 <div id="writing-pandoc-slides-2" class="slide section level1">
@@ -257,8 +284,8 @@ console.log(&quot;very&quot;);
 console.log(&quot;nice&quot;);
 ` ` `</code></pre>
 <p>Produces:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource javascript numberLines"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;very&quot;</span>)<span class="op">;</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;nice&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource javascript numberLines"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;very&quot;</span>)<span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;nice&quot;</span>)<span class="op">;</span></span></code></pre></div>
 <p><em>Note: the backticks above had to be spaced for font rendering purposes. Do not include spaces between backticks in your code.</em></p>
 </div>
 <div id="writing-pandoc-slides-3" class="slide section level1">
@@ -306,33 +333,6 @@ small content to the right
 <h2 id="hrs">HRs</h2>
 <p>You can insert a horizontal ruler / HR by using the html tag: <code>&lt;hr /&gt;</code></p>
 <hr />
-</div>
-<div id="pre-commit-hook" class="slide section level1">
-<h1>Pre-commit hook</h1>
-<p>If you need to make sure your <code>index.html</code> is up to date with your source, you can use a pre-commit hook like this:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash numberLines"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">#!/usr/bin/env sh</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a></span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="ex">./gen.sh</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="fu">git</span> add index.html</span></code></pre></div>
-<p>A sample is provided under <code>/pre-commit.sample</code> which you can copy to <code>.git/hooks/pre-commit</code></p>
-</div>
-<div id="deploying-to-github-pages" class="slide section level1">
-<h1>Deploying to Github pages</h1>
-<p>Deploying this to Github pages is straightforward.</p>
-<ol style="list-style-type: decimal">
-<li>(Fork repo, rename, enter your content, etc)</li>
-<li>Go to GitHub -&gt; Settings -&gt; Pages</li>
-<li>Under “Build and Deployment -&gt; Branch”, select <code>main</code> and click <code>Save</code>.</li>
-</ol>
-<p>Your presentation will be deployed to the URL:</p>
-<p><code>https://&lt;GitHub Username&gt;.github.io/&lt;Repo Name&gt;</code></p>
-<hr />
-<p>If you have moved <code>index.html</code> to a subfolder:</p>
-<ol style="list-style-type: decimal">
-<li>Edit <code>/.github/workflows/static.yml</code></li>
-<li>Locate the <code>jobs.deploy.steps.Upload artifact</code> step (should have a comment “Upload entire repository”.)</li>
-<li>Replace <code>path</code> with the path to your document root.</li>
-</ol>
 </div>
   
   <script src="assets/scripts/index.js" charset="utf-8" type="text/javascript"></script>

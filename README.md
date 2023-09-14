@@ -58,6 +58,39 @@ CSS stylesheets can be tweaked under `assets/styles/`.
 
 If you want to pick different colors or tones, please consult the [Color System](https://www.figma.com/file/cNQkFOjrqO3PAYv7TSIhpB/Foundation?type=design&node-id=188-869&mode=design&t=5J7YpU6yxy8El0DC-0).
 
+# Pre-commit hook
+
+If you need to make sure your `index.html` is up to date with your source, you can use a pre-commit hook like this:
+
+```{.bash .numberLines}
+#!/usr/bin/env sh
+
+./gen.sh
+git add index.html
+```
+
+A sample is provided under `/pre-commit.sample` which you can copy to `.git/hooks/pre-commit`
+
+# Deploying to Github pages
+
+Deploying this to Github pages is straightforward.
+
+1) (Fork repo, rename, enter your content, etc)
+1) Go to GitHub -> Settings -> Pages
+1) Under "Build and Deployment -> Branch", select `main` and click `Save`.
+
+Your presentation will be deployed to the URL:
+
+`https://<GitHub Username>.github.io/<Repo Name>`
+
+---
+
+If you have moved `index.html` to a subfolder:
+
+1) Edit `/.github/workflows/static.yml`
+1) Locate the `jobs.deploy.steps.Upload artifact` step (should have a comment "Upload entire repository".)
+1) Replace `path` with the path to your document root.
+
 ## Writing pandoc slides
 
 The full pandoc markdown reference can be found [here](https://pandoc.org/MANUAL.html#pandocs-markdown).
@@ -127,35 +160,3 @@ To split a slide in two or more columns, you can use this markdown:
 
 You can insert a horizontal ruler / HR by using the html tag: `<hr />`
 
-# Pre-commit hook
-
-If you need to make sure your `index.html` is up to date with your source, you can use a pre-commit hook like this:
-
-```{.bash .numberLines}
-#!/usr/bin/env sh
-
-./gen.sh
-git add index.html
-```
-
-A sample is provided under `/pre-commit.sample` which you can copy to `.git/hooks/pre-commit`
-
-# Deploying to Github pages
-
-Deploying this to Github pages is straightforward.
-
-1) (Fork repo, rename, enter your content, etc)
-1) Go to GitHub -> Settings -> Pages
-1) Under "Build and Deployment -> Branch", select `main` and click `Save`.
-
-Your presentation will be deployed to the URL:
-
-`https://<GitHub Username>.github.io/<Repo Name>`
-
----
-
-If you have moved `index.html` to a subfolder:
-
-1) Edit `/.github/workflows/static.yml`
-1) Locate the `jobs.deploy.steps.Upload artifact` step (should have a comment "Upload entire repository".)
-1) Replace `path` with the path to your document root.

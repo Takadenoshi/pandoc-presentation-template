@@ -5,7 +5,7 @@ author: tasos@kadena.io isa@kadena.io
 date: September 13, 2023
 background: assets/images/bg.png # image background; used if video is not present or slide_bg_is_video is not true
 icons: # icon sources for title slide
-  - assets/icons/k-internal-icon.jpg 
+  - assets/icons/k-internal-icon.jpg
 video: # video for background. multiple formats are supported
   - src: assets/videos/kd-back.mp4
     type: video/mp4
@@ -37,7 +37,7 @@ Running `./gen.sh` will rebuild the target `index.html`.
 
 Running `./gen-watch.sh` will watch the current directory for changes to `.md` or `.slidy` files and run `gen.sh` when any change is detected.
 
-Running `./gen-standalone.sh` will create a standalone index.html with all resources inlined.
+Running `./gen-standalone.sh` will create a standalone index.html with all resources inlined, which can be shared as-is.
 
 
 # Configuring
@@ -88,9 +88,9 @@ Slides are separated by H1 headings `# My next Slide` or three dashes `---`.
 
 Code blocks can have syntax highlighting, e.g.:
 
-    ```javascript
+    ` ` ` javascript
     console.log("very nice");
-    ```
+    ` ` `
 
 Produces:
 
@@ -103,10 +103,10 @@ console.log("very nice");
 
 If you need line numbers in code blocks, use this invocation:
 
-    ```{.javascript .numberLines}
+    ` ` ` {.javascript .numberLines}
     console.log("very");
     console.log("nice");
-    ```
+    ` ` `
 
 Produces:
 
@@ -152,7 +152,7 @@ To split a slide in two or more columns, you can use this markdown:
     :::::::::::::: {.columns}
     ::: {.column width="80%"}
 
-    large content to the left
+    ## large content to the left
 
     :::
     ::: {.column width="20%"}
@@ -190,6 +190,8 @@ You can insert a horizontal ruler / HR by using the html tag: `<hr />`
 If you need to make sure your `index.html` is up to date with your source, you can use a pre-commit hook like this:
 
 ```{.bash .numberLines}
+#!/usr/bin/env sh
+
 ./gen.sh
 git add index.html
 ```
@@ -198,4 +200,14 @@ A sample is provided under `/pre-commit.sample`
 
 # Deploying to Github pages
 
-This project is ready to deploy to Github pages. If your project is public, just `TODO`
+Deploying this to Github pages is straightforward.
+
+1) (Fork repo, rename, enter your content, etc)
+1) Go to GitHub -> Settings -> Pages
+1) Under "Build and Deployment -> Source", select "GitHub Actions"
+1) Configure the "Static HTML" workflow
+1) Accept the defaults
+    1) If you have customized the location of `index.html`: Locate `path` under `jobs.deploy.steps.Upload artifact` (should have a comment "Upload entire repository".) Replace `.` with the path to your document root.
+
+
+_Note: This is only available for public repositories._

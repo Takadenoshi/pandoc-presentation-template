@@ -70,8 +70,8 @@ They can be omitted, which will default to an image background.
 
 |Name|Description|
 |:----|:-----------|
-|`icons`|List of image sources to show as icons over the title on the title slide. can be omitted|
-|`video`|List of `{.src, .type}` for video sources for the background of the title slide (or the entire presentation)|
+|`icons`|List of image sources to show as icons over the title on the title slide.
+|`video`|List of `{.src, .type}` video sources for the background of the title slide (or presentation)|
 |`video_playback_rate`|custom playback rate for the video|
 |`slide_bg_is_video`|`true` to use the video as presentation background, `false` to use image instead|
 |`background`|image background for presentation if `video` is missing or `slide_bg_is_video` is `false`|

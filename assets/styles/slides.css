@@ -74,6 +74,18 @@ pre code {
 }
 
 ul li {
+  list-style: disc;
+}
+
+ul ul li {
+  list-style: circle;
+}
+
+ul ul ul li {
+  list-style: disc;
+}
+
+ul ul ul ul li {
   list-style: circle;
 }
 

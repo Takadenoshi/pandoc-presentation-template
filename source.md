@@ -32,6 +32,7 @@ Optionally: deploy to github pages.
     - You can find instructions on installing pandoc on your machine [here](https://pandoc.org/installing.html).
 - `./gen-watch.sh` requires nodemon.
     - You can install that globally with `npm i -g nodemon` or `yarn global add nodemon`.
+      - Don't have `npm`? You can install [node js](https://nodejs.org/en/download) to get it.
 
 # Running
 

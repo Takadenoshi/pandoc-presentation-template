@@ -1,10 +1,10 @@
 ---
-title-prefix: Example
-title:  Kadena-themed Pandoc Presentation Template
+title-prefix: Kadena-themed
+title:  Styled Pandoc Presentation Template
 author: tasos@kadena.io isa@kadena.io
 date: September 13, 2023
 background: assets/images/bg.png                # image background; used if video is not present or slide_bg_is_video is not true
-logosig: assets/icons/k-internal-icon-alpha.png # "signature" logo at bottom right of each slide
+logosig: assets/icons/k-internal-icon-alpha.png # "signature" logo at bottom right of each slide. to disable this, set to a 1x1 transparent png
 icons:                                          # icon sources for title slide
   - assets/icons/k-internal-icon.jpg
 video:                                          # video for background. multiple formats are supported
@@ -14,7 +14,7 @@ video_playback_rate: 0.5                        # slow down the video
 slide_bg_is_video: true                         # true to use a darkened version of the video as slide background
 ---
 
-# Kadena-themed Pandoc Presentation Template
+# Styled Pandoc Presentation Template
 
 Create Kadena-themed presentations from markdown using pandoc
 

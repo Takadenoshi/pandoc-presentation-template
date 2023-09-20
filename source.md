@@ -4,6 +4,7 @@ title:  Kadena-themed Pandoc Presentation Template
 author: tasos@kadena.io isa@kadena.io
 date: September 13, 2023
 background: assets/images/bg.png                # image background; used if video is not present or slide_bg_is_video is not true
+logosig: assets/icons/k-internal-icon-alpha.png # "signature" logo at bottom right of each slide
 icons:                                          # icon sources for title slide
   - assets/icons/k-internal-icon.jpg
 video:                                          # video for background. multiple formats are supported
@@ -67,17 +68,16 @@ The header of the source markdown file includes the following variables that can
 
 ## Markdown metadata (2)
 
-The following custom metadata can be used to customize the presentation theme.
-
-They can be omitted, which will default to an image background.
+The following **optional** metadata can be used to customize the presentation theme.
 
 |Name|Description|
 |:----|:-----------|
+|`background`|image background for presentation if `video` is missing or `slide_bg_is_video` is `false`|
+|`logosig`|"signature" logo at bottom right of each slide|
 |`icons`|List of image sources to show as icons over the title on the title slide.
 |`video`|List of `{.src, .type}` video sources for the background of the title slide (or presentation)|
 |`video_playback_rate`|custom playback rate for the video|
 |`slide_bg_is_video`|`true` to use the video as presentation background, `false` to use image instead|
-|`background`|image background for presentation if `video` is missing or `slide_bg_is_video` is `false`|
 
 # Configuring
 

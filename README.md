@@ -48,6 +48,8 @@ The header of the source markdown file includes the following variables that can
 |video_playback_rate|Custom playback rate for the video.|
 |slide_bg_is_video|`true` to use the video as presentation background, `false` to use image instead. Can be omitted.|
 |background|Image background for presentation if `video` is missing or `slide_bg_is_video` is `false`. Can be omitted.|
+|`logosig`|"signature" logo at bottom right of each slide|
+
 
 ### Slidy template
 

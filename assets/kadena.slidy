@@ -47,6 +47,8 @@ $if(duration)$
     $include-before$
   $endfor$
 
+  <img class="logosig-icon" id="logosig-icon" src="$if(logosig)$$logosig$$else$assets/icons/k-internal-icon-transparent-white.png$endif$" />
+
   <img src="$if(background)$$background$$else$assets/images/bg.png$endif$" class="background" />
 
   $if(video)$

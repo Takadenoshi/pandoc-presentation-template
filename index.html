@@ -95,6 +95,8 @@
 </head>
 <body>
   
+  <img class="logosig-icon" id="logosig-icon" src="assets/icons/k-internal-icon-alpha.png" />
+
   <img src="assets/images/bg.png" class="background" />
 
       <video id="video-cover" loop muted oncanplay="showvideo()">
@@ -188,8 +190,7 @@
 <div id="configuring-1" class="slide section level1">
 <h1>Configuring</h1>
 <h2 id="markdown-metadata-2">Markdown metadata (2)</h2>
-<p>The following custom metadata can be used to customize the presentation theme.</p>
-<p>They can be omitted, which will default to an image background.</p>
+<p>The following <strong>optional</strong> metadata can be used to customize the presentation theme.</p>
 <table>
 <colgroup>
 <col width="29%" />
@@ -202,6 +203,14 @@
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td align="left"><code>background</code></td>
+<td align="left">image background for presentation if <code>video</code> is missing or <code>slide_bg_is_video</code> is <code>false</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>logosig</code></td>
+<td align="left">“signature” logo at bottom right of each slide</td>
+</tr>
 <tr class="odd">
 <td align="left"><code>icons</code></td>
 <td align="left">List of image sources to show as icons over the title on the title slide.</td>
@@ -217,10 +226,6 @@
 <tr class="even">
 <td align="left"><code>slide_bg_is_video</code></td>
 <td align="left"><code>true</code> to use the video as presentation background, <code>false</code> to use image instead</td>
-</tr>
-<tr class="odd">
-<td align="left"><code>background</code></td>
-<td align="left">image background for presentation if <code>video</code> is missing or <code>slide_bg_is_video</code> is <code>false</code></td>
 </tr>
 </tbody>
 </table>

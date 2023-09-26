@@ -120,6 +120,7 @@
 <h1>Styled Pandoc Presentation Template</h1>
 <p>Create Kadena-themed presentations from markdown using pandoc</p>
 <ol style="list-style-type: decimal">
+<li>Clone repository</li>
 <li>Install requirements</li>
 <li>run <code>./gen-watch.sh</code></li>
 <li>Write your slides in <code>source.md</code></li>
@@ -299,25 +300,6 @@ console.log(&quot;nice&quot;);
 </div>
 <div id="writing-pandoc-slides-3" class="slide section level1">
 <h1>Writing pandoc slides</h1>
-<h2 id="lists">Lists</h2>
-<p>Lists must be separated with a newline from the previous paragraph <strong>but</strong> without newlines between them:</p>
-<p>Correct:</p>
-<pre><code>This is the full list:
-
-- one
-- two
-- three</code></pre>
-<p>Incorrect:</p>
-<pre><code>This is the full list:
-
-- one
-
-- two
-
-- three</code></pre>
-</div>
-<div id="writing-pandoc-slides-4" class="slide section level1">
-<h1>Writing pandoc slides</h1>
 <h2 id="columns">Columns</h2>
 <p>To split a slide in two or more columns, you can use this markdown:</p>
 <pre><code>:::::::::::::: {.columns}
@@ -337,9 +319,10 @@ small content to the right
 </div>
 </div>
 </div>
-<div id="writing-pandoc-slides-5" class="slide section level1">
+<div id="writing-pandoc-slides-4" class="slide section level1">
 <h1>Writing pandoc slides</h1>
 <h2 id="hrs">HRs</h2>
+<p>The usual markdown for a ruler <code>---</code> denotes “new slide” in pandoc</p>
 <p>You can insert a horizontal ruler / HR by using the html tag: <code>&lt;hr /&gt;</code></p>
 <hr />
 </div>

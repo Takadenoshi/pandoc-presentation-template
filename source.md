@@ -18,6 +18,7 @@ slide_bg_is_video: true                         # true to use a darkened version
 
 Create Kadena-themed presentations from markdown using pandoc
 
+1) Clone repository
 1) Install requirements
 1) run `./gen-watch.sh`
 1) Write your slides in `source.md`
@@ -176,34 +177,6 @@ _Note: the backticks above had to be spaced for font rendering purposes. Do not 
 
 # Writing pandoc slides
 
-## Lists
-
-Lists must be separated with a newline from the previous paragraph **but** without newlines between them:
-
-Correct:
-
-```
-This is the full list:
-
-- one
-- two
-- three
-```
-
-Incorrect:
-
-```
-This is the full list:
-
-- one
-
-- two
-
-- three
-```
-
-# Writing pandoc slides
-
 ## Columns
 
 To split a slide in two or more columns, you can use this markdown:
@@ -231,6 +204,8 @@ small content to the right
 # Writing pandoc slides
 
 ## HRs
+
+The usual markdown for a ruler `---` denotes "new slide" in pandoc
 
 You can insert a horizontal ruler / HR by using the html tag: `<hr />`
 
